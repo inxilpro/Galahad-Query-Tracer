@@ -1,26 +1,33 @@
-=== Plugin Name ===
+=== Galahad Query Tracer ===
 Contributors: inxilpro
 Donate link: 
 Tags: debug bar, performance, backtrace, wpdb
-Requires at least: 3.0
+Requires at least: 3.2
 Tested up to: 3.2
 Stable tag: 0.1
 
-Here is a short description of the plugin.  This should be no more than 150 characters.  No markup here.
+A Debug Bar plugin that lets you trace what plugins are causing database queries.
 
 == Description ==
 
-This is the long description.  No limit, and you can use Markdown (as well as in the following sections).
+This Query Tracer plugin backtraces all calls to WPDB::query() and determines a) which plugin caused that
+database query (it ignores all queries that are a part of normal Wordpress activity) and b) the function
+chain that led to that query.  It then displays that information on an additional panel in the Debug Bar
+plugin (which is required).
 
 == Installation ==
 
+1. Install the [Debug Bar](http://wordpress.org/extend/plugins/debug-bar/) plugin
+2. Install the Query Tracer plugin
+
 == Frequently Asked Questions ==
+
+Feel free to ask questions [on my website](http://cmorrell.com/open-source/wordpress-plugins/debug-bar-query-tracer) and
+I will update this section with any frequent questions.
 
 == Screenshots ==
 
-1. This screen shot description corresponds to screenshot-1.(png|jpg|jpeg|gif). Note that the screenshot is taken from
-the directory of the stable readme.txt, so in this case, `/tags/4.3/screenshot-1.png` (or jpg, jpeg, gif)
-2. This is the second screen shot
+1. The Query Tracer Panel
 
 == Changelog ==
 
