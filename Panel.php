@@ -10,7 +10,7 @@ class Galahad_Query_Tracer_Panel extends Debug_Bar_Panel
 	 * Initialize Panel
 	 */
 	public function init() {
-		$this->title(__('Query Tracer', 'galahad-query_tracer'));
+		$this->title(__('Query Tracer', 'galahad-query-tracer'));
 	}
 
 	/**
@@ -54,12 +54,12 @@ class Galahad_Query_Tracer_Panel extends Debug_Bar_Panel
 			echo "<h2>{$pluginData['name']}</h2>";
 			foreach ($pluginData['backtrace'] as $filename => $data) {
 				$filename = htmlspecialchars($filename);
-				echo "<h3>$filename</h3>
+				printf('<h3>%s</h3>
 					  <table>
 					  <tr>
-					  	<th>Line</th>
-					  	<th>Query &amp; Function Chain</th>
-					  </tr>";
+					  	<th>%s</th>
+					  	<th>%s</th>
+					  </tr>', htmlspecialchars($filename), __('Line', 'galahad-query-tracer'), __('Query &amp; Function Chain', 'galahad-query-tracer'));
 				foreach ($data as $query) {
 					$query['query'] = htmlspecialchars($query['query']);
 					$functionChain = implode(' &#8594; ', $query['function_chain']);
