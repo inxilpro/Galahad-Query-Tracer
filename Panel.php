@@ -37,7 +37,16 @@ class Galahad_Query_Tracer_Panel extends Debug_Bar_Panel
 		</style>
 		
 		<div id="galahad-tracer">
-			<?php $this->_renderData(Galahad_Query_Tracer::instance()->getData()); ?>
+			<?php 
+			
+			$data = Galahad_Query_Tracer::instance()->getData();
+			if (!empty($data)) {
+				$this->_renderData(); 
+			} else {
+				_e('No queries caused by plugins.');
+			}
+			
+			?>
 		</div>
 		
 		<?php

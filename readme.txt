@@ -38,3 +38,8 @@ I will update this section with any frequent questions.
 
 = 0.1 =
 * Initial release
+= 0.1.1 =
+* Made sure everything is ready for internationalization
+= 0.1.2 = 
+* Bugfixes
+* Added better handling for instances where not queries were caused by plugins
