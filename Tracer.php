@@ -115,6 +115,8 @@ class Galahad_Query_Tracer
 					}
 				}
 			}
+			
+			$this->_parsed = true;
 		}
 		
 		usort($this->_data, array($this, '_sortByName'));
