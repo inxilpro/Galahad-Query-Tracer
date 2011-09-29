@@ -4,7 +4,7 @@ Donate link:
 Tags: debug bar, performance, backtrace, wpdb
 Requires at least: 3.2
 Tested up to: 3.2
-Stable tag: 0.1.1
+Stable tag: 0.1.2
 
 A Debug Bar plugin that lets you trace what plugins are causing database queries.
 
